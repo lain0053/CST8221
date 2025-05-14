@@ -8,15 +8,7 @@
 }
 {
 .
-.
-.
-.
-.
-.
-.
-"                                       "|==<color:purple>QUANTUM CIRCUIT SIMULATOR|"                                      "
-.
-.
+"                           "|==<color:purple>QUANTUM CIRCUIT SIMULATOR|"                          "
 .
 .
 }
@@ -150,27 +142,15 @@
           "             "
         }
       }
-    }|
-    {^"Messages"
-        {SI
-        Insert your text here:
-        .
-        .
-        .
-        .
-        .
-        .
-        .
-        .
-        .
-        .
-        .
-        .
-        .
-        .
-        .
-        "                   "
-        }
+    }    
+}
+{^"Messages"
+    {SI
+    Insert your text here:
+    .
+    .
+    .
+    "                                                                                 "
     }
 }
 }
