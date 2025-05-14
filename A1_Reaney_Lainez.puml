@@ -1,0 +1,178 @@
+
+@startsalt
+{+
+{+
+    ^File^^New Circuit^^Open^^Save^^Exit^|" "|
+    ^Settings^^Language^^Appearance^^Colours^|" "|
+    ^Help^^Readme^^About^
+}
+{
+.
+.
+.
+.
+.
+.
+.
+"                                       "|==<color:purple>QUANTUM CIRCUIT SIMULATOR|"                                      "
+.
+.
+.
+.
+}
+{+
+    {^"Quantum Gates"
+        {^"Single Quibits"
+            [  <back:LightCoral>I  ]|[  <back:lightblue>X  ]
+            [  <back:lightgreen>Y  ]|[  <back:red>Z  ]
+            [  <back:LightSalmon>H  ]|[  <back:yellow>S  ]
+            [  <back:lightgray>T  ]|[  <back:pink>U  ]
+        }
+        {^"Multi Quibits"
+            [     <back:SkyBlue>CX     ]
+            [    <back:PaleVioletRed>SWAP    ]
+            [     <back:Aquamarine>CU     ]
+            [    <back:PaleGoldenRod>CCX     ]
+        }
+    }|
+    {
+    {
+    |"                               "|Step: 1/5|"                 "|[ + ]|[ > ]|[ << ]|
+    }
+      {-
+        {!
+          .
+          .
+          .
+          .
+          "             "
+        }|
+        {!
+          .
+          .
+          .
+          .
+          "             "
+        }|
+        {!
+          .
+          .
+          .
+          .
+          "             "
+        }|
+        {!
+          .
+          .
+          .
+          .
+          "             "
+        }|
+        {!
+          .
+          .
+          .
+          .
+          "             "
+        }
+      }
+      {-
+        {!
+          .
+          .
+          .
+          .
+          "             "
+        }|
+        {!
+          .
+          .
+          .
+          .
+          "             "
+        }|
+        {!
+          .
+          .
+          .
+          .
+          "             "
+        }|
+        {!
+          .
+          .
+          .
+          .
+          "             "
+        }|
+        {!
+          .
+          .
+          .
+          .
+          "             "
+        }
+      }
+      {-
+        {!
+          .
+          .
+          .
+          .
+          "             "
+        }|
+        {!
+          .
+          .
+          .
+          .
+          "             "
+        }|
+        {!
+          .
+          .
+          .
+          .
+          "             "
+        }|
+        {!
+          .
+          .
+          .
+          .
+          "             "
+        }|
+        {!
+          .
+          .
+          .
+          .
+          "             "
+        }
+      }
+    }|
+    {^"Messages"
+        {SI
+        Insert your text here:
+        .
+        .
+        .
+        .
+        .
+        .
+        .
+        .
+        .
+        .
+        .
+        .
+        .
+        .
+        .
+        "                   "
+        }
+    }
+}
+}
+@endsalt
+
