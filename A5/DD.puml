@@ -1,0 +1,21 @@
+@startuml
+
+node "Client" {
+  artifact "MVC" {
+    component "QCSView (UI)"
+    component "QCSController (Controller)"
+    component "QCSModel (Model)"
+  }
+  artifact "Client Interface"
+  artifact "Login Interface"
+}
+
+node "Server" {
+    artifact "Server Interface"
+    artifact "Database"
+    artifact "Login Interface"
+}
+
+"Client" --> "Server"
+
+@enduml

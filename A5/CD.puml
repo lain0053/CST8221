@@ -1,0 +1,64 @@
+@startuml
+
+
+participant ServerGUI
+participant Server
+database Database
+participant Client
+participant Protocol << (C, MediumPurple) Class>>
+participant QCSView
+participant QCSController
+participant QCSModel
+
+'== Server Startup ==
+
+ServerGUI -> Server : startServer(port)
+Server -> Database : createDB()
+Server -> Database : showDB()
+
+'== Login or Sign Up (Protocol talks directly to Database) ==
+
+Client -> Protocol : sendLoginRequest(credentials)
+Protocol -> Database : verifyCredentials(credentials)
+
+alt Login
+    Database --> Protocol : valid / invalid
+else Sign Up
+    Protocol -> Database : insert new user
+    Database --> Protocol : success / fail
+end
+
+Protocol --> Client : loginResult
+
+'== On Successful Login: Client connects to Server ==
+
+Client -> Protocol : connectToServer(ip, port)
+Protocol -> Server : establishConnection()
+
+Client -> QCSView : launchMainInterface()
+QCSView -> QCSController : initializeController()
+QCSController -> QCSModel : initializeModel()
+
+'== Client Basic Functionalities ==
+
+Client -> Protocol : sendNewCircuit(circuitData)
+Protocol -> Server : forwardCircuit(circuitData)
+Server -> Database : insertCircuit(circuitData)
+Database --> Server : insertResult
+Server --> Protocol : acknowledgment
+Protocol --> Client : sendCircuitResponse
+
+Server -> Database : selectCircuit()
+Database --> Server : circuitData
+Server --> Protocol : sendCircuitData
+Protocol --> Client : receiveCircuitData
+
+Client -> Protocol : runCircuitRequest(circuitData)
+Protocol -> Server : forwardRunRequest(circuitData)
+Server -> Protocol : runSimulation()
+Protocol --> Client : simulationResult
+
+Client -> Protocol : endConnection()
+Protocol -> Server : closeConnection()
+
+@enduml

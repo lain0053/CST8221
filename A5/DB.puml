@@ -1,0 +1,25 @@
+@startuml
+
+title Quantum Circuit Simulator Database
+
+entity "QuantumCircuits" as QC {
+  * id : INTEGER <<PK>>
+  --
+  filename : TEXT
+  circuit : TEXT
+  rows : INTEGER
+  cols : INTEGER
+  LAF : TEXT
+  language : TEXT
+}
+
+entity "CircuitResults" as CR {
+  * id : INTEGER <<PK>>
+  --
+  circuit_id : INTEGER <<FK>>
+  result : TEXT
+}
+
+QC ||--o{ CR : "has results"
+
+@enduml
